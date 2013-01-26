@@ -1,0 +1,34 @@
+aluno:
+  
+  nome
+  data nascimento
+  nome do pai
+  nome da mae\
+
+  pertence a uma sala
+
+____________________________
+
+
+turma:
+
+  codigo (exemplo: T01)
+  descrição
+
+
+____________________________
+
+
+professor:
+
+  nome
+  data nascimento
+  materia
+
+  pertence a uma sala
+
+
+____________________________
+
+
+
