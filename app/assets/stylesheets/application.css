@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+@import bootstrap;
+@import bootstrap-responsive;
+
+
+ #page {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+ }

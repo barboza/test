@@ -1,8 +1,6 @@
 class Teacher < ActiveRecord::Base
-  attr_accessible :birthday, :name
+  attr_accessible :birthday, :name, :matter
 
-  has_one :matter
-
-  belongs_to :classroom
+  has_and_belongs_to_many :classrooms
 
 end
