@@ -1,0 +1,20 @@
+<h1>Create Reports based on classrooms</h1>
+<br>
+<h2>Choose the Classroom that you want the report.</h2>
+
+
+<%= form_tag "/reports/show_report_classroom/" do %>
+  
+  <div class="field">
+    <%= select_tag "classroom_id", options_from_collection_for_select(@classroom, "id", "code"), :prompt => "Select a Classroom" %>
+  </div>
+
+  <div class="field">
+    <p><%= submit_tag "Make Report" %></p>
+  </div>
+
+  <div class="field">
+    <p><%= link_to "Back to Reports", root_path %></p>
+  </div>
+
+<% end %>

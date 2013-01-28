@@ -10,6 +10,16 @@
   <%= @teacher.birthday %>
 </p>
 
+<p>
+  <b>Matter:</b>
+  <%= @teacher.matter %>
+</p>
+
+<p>
+  <b>Classroom:</b>
+  <%= Classroom.find(@teacher.classroom_id).code %>
+</p>
+
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>

@@ -4,17 +4,29 @@ describe Student do
   
   before do
     @student = Student.new
-    @student.name = "Aluno 1"
-  end
+  end 
 
-  it "should valid" do
-    @student.should be_valid
+  it "should not save without a name & birthday" do
+    @student.should_not be_valid
   end
 
   it "should not save without a name" do
-    @student = Student.new
+    @student.birthday = "1993-02-25"
     @student.should_not be_valid
-  end  
+  end
+
+  it "should not save without a birthday" do
+    @student.name = "Patrick"
+    @student.should_not be_valid
+  end
+  
+  describe "associations" do
+    it "should belongs to one classroom" do
+      @classroom = Classroom.new code: "Turma 1"
+      @student.classroom = @classroom
+      @student.classroom.should == @classroom
+    end
+  end
 
 end
 

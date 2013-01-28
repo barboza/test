@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Birthday</th>
+    <th>Classroom</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,9 +14,10 @@
   <tr>
     <td><%= teacher.name %></td>
     <td><%= teacher.birthday %></td>
+    <td><%= Classroom.find(teacher.classroom_id).code %></td>
     <td><%= link_to 'Show', teacher %></td>
     <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-    <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "Delete", teacher , :method=>:delete, :class=>:destroy %></td>
   </tr>
 <% end %>
 </table>

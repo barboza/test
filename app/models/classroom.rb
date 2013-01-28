@@ -1,5 +1,5 @@
 class Classroom < ActiveRecord::Base
-  attr_accessible :code, :description
+  attr_accessible :code, :description, :teacher_id
 
   validates :code, presence: true
 

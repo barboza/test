@@ -1,0 +1,40 @@
+<div id="header">
+          <h1>Welcome to your school manager.</h1>
+        </div>
+
+        <br><br>
+
+        <div id="getting-started">
+          <ol>
+            <li>
+              <h2>Create a new Student</h2>
+              <p><%= link_to "New Estudent", new_student_path %></p>
+            </li>
+
+            <li>
+              <h2>Create a new Classroom</h2>
+              <p><%= link_to "New Classroom", new_classroom_path %></p>
+            </li>
+
+            <li>
+              <h2>Create a new Teacher</h2>
+              <p><%= link_to "New Teacher", new_teacher_path %></p>
+            </li>
+          </ol>
+        </div>
+
+
+        <div id="getting-started">
+          <h1></h1>
+          <ol>
+            <li>
+              <h2>Create a new Report based on classroom</h2>
+              <p><%= link_to "Choose Classroom", "/reports/report_classroom/" %></p>
+            </li>
+
+            <li>
+              <h2>Create a new Report based on teacher</h2>
+              <p><%= link_to "Choose Teacher", "/reports/report_teacher/" %></p>
+            </li>
+          </ol>
+        </div>

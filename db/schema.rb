@@ -18,19 +18,11 @@ ActiveRecord::Schema.define(:version => 20130126231904) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "teachers_id"
   end
 
   create_table "classrooms_teachers", :id => false, :force => true do |t|
     t.integer "classroom_id"
     t.integer "teacher_id"
-  end
-
-  create_table "matters", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "students", :force => true do |t|
@@ -50,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130126231904) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "matter_id"
+    t.integer  "classroom_id"
   end
 
 end

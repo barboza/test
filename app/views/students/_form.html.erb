@@ -27,6 +27,14 @@
     <%= f.label :father_name %><br />
     <%= f.text_field :father_name %>
   </div>
+
+  <div class="field">
+    <label>Classroom</label><br>
+    <%= f.select :classroom_id, :collection => Classroom.all.map { |e| [e.code, e.id] }, :label => 'Classroom' %>
+  </div>
+  <br><br>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

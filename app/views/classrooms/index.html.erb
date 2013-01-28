@@ -1,4 +1,4 @@
-<h1>Listing classrooms</h1>
+<h1>Listing Classrooms</h1>
 
 <table>
   <tr>
@@ -15,7 +15,7 @@
     <td><%= classroom.description %></td>
     <td><%= link_to 'Show', classroom %></td>
     <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
-    <td><%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "Delete", classroom, :method => :delete, :class => :destroy %></td>
   </tr>
 <% end %>
 </table>

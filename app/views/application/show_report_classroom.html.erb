@@ -1,0 +1,34 @@
+<h1>Report for <%= @classroom.code %></h1>
+
+
+<h2>STUDENTS</h2>
+<table class="table table-stripped">
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+  </tr>
+
+<% @classroom.students.each do |s| %>
+  <tr>
+    <td><%= s.id %></td>
+    <td><%= s.name %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+<h2>TEACHERS</h2>
+<table class="table table-stripped">
+  <tr>
+    <th>Teacher Name</th>
+    <th>Matter</th>
+  </tr>
+
+<% @classroom.teachers.all.each do |t| %>
+  <tr>
+    <td><%= t.name %></td>
+    <td><%= t.matter %></td>
+  </tr>
+<% end %>
+</table>

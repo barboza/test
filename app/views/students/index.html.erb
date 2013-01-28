@@ -1,11 +1,8 @@
 <h1>Listing students</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
-    <th>Birthday</th>
-    <th>Mother name</th>
-    <th>Father name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,12 +11,9 @@
 <% @students.each do |student| %>
   <tr>
     <td><%= student.name %></td>
-    <td><%= student.birthday %></td>
-    <td><%= student.mother_name %></td>
-    <td><%= student.father_name %></td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to "Delete", student, :method=>:delete, :class=>:destroy %></td>
   </tr>
 <% end %>
 </table>

@@ -1,14 +1,16 @@
 TestNohup::Application.routes.draw do
-  resources :matters
-
 
   resources :teachers
+  match 'reports/report_teacher' => 'application#report_teacher'
+  match 'reports/show_report_teacher' => 'application#show_report_teacher'
 
 
   resources :classrooms
-
+  match 'reports/report_classroom' => 'application#report_classroom'
+  match 'reports/show_report_classroom' => 'application#show_report_classroom'
 
   resources :students
+
 
   root :to => 'application#index'
 

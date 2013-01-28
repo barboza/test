@@ -1,0 +1,17 @@
+<h1>Report for <%= @teacher.name %></h1>
+
+
+<h2>STUDENTS</h2>
+<table>
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+  </tr>
+
+<% Classroom.find(@teacher.classroom_id).students.each do |student| %>
+  <tr>
+    <td><%= student.id %></td>
+    <td><%= student.name %></td>
+  </tr>
+<% end %>
+</table>
